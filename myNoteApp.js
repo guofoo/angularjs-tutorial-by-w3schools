@@ -1,1 +1,1 @@
-var app = angular.module("myNoteApp.js", []);
+var app = angular.module("myNoteApp", []);
