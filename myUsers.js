@@ -37,7 +37,7 @@ $scope.test = function() {
   // if passwords are not equal, there is error.
   if ($scope.passw1 !== $scope.passw2) {
 
-  } else {
+  } else { // passwords are equal, set error to false.
 
   }
   // default: set incomplete to false. Assume the form is complete.
@@ -47,7 +47,7 @@ $scope.test = function() {
   
   
   )) {
-    $scope.incomplete = true;
+    $scope.incomplete = true; //if not all fields are filled, set incomplete to true.
   }
 };
 
