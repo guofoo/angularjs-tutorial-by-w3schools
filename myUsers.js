@@ -21,10 +21,10 @@ $scope.editUser = function(id) {
     $scope.incomplete = true;
     $scope.fName = '';
     $scope.lName = '';
-    } else {
+  } else {
     $scope.edit = false;
-    $scope.fName = $scope.users[id-1].fName;
-    $scope.lName = $scope.users[id-1].lName; 
+    $scope.fName = '';
+    $scope.lName = ''; 
   }
 };
 
@@ -34,16 +34,20 @@ $scope.$watch('fName', function() {$scope.test();});
 $scope.$watch('lName', function() {$scope.test();});
 
 $scope.test = function() {
+  // if passwords are not equal, there is error.
   if ($scope.passw1 !== $scope.passw2) {
-    $scope.error = true;
-    } else {
-    $scope.error = false;
+
+  } else {
+
   }
+  // default: set incomplete to false. Assume the form is complete.
   $scope.incomplete = false;
   if ($scope.edit && (!$scope.fName.length ||
-  !$scope.lName.length ||
-  !$scope.passw1.length || !$scope.passw2.length)) {
-       $scope.incomplete = true;
+    !$scope.lName.length
+  
+  
+  )) {
+    $scope.incomplete = true;
   }
 };
 
