@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
 <script src= "angular.min.js"></script>
-<body>
+<body ng-app="myNoteApp" ng-controller="myNoteCtrl">
 
-<p>Try to change the names.</p>
+<h2>My Note</h2>
 
-<div ng-app="myApp" ng-controller="myCtrl">
+<textarea ng-model="" cols="40" rows="10"></textarea>
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
+<p>
+<button  >Save</button>
+<button  >Clear</button>
+</p>
 
-</div>
+<p>Number of characters left: <span ng-bind="  "></span></p>
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-  $scope.firstName= "John";
-  $scope.lastName= "Doe";
-});
-</script>
+<script src="myNoteApp.js"></script>
+<script src="myNoteCtrl.js"></script>
 
 </body>
 </html>
