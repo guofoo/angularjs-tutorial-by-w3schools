@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="">
+<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script src= "angular.min.js"></script>
-<body>
+<body ng-controller="userCtrl">
 
-<p>Try to change the names.</p>
-
-<div ng-app="myApp" ng-controller="myCtrl">
-
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
-
+<div class="container">
+<div ng-include=""></div>
+<div ng-include="'myUsers_Form.html'"></div>
 </div>
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-  $scope.firstName= "John";
-  $scope.lastName= "Doe";
-});
-</script>
+<script src= "myUsers.js"></script>
 
 </body>
 </html>
